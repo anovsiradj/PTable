@@ -22,6 +22,7 @@ $tbody = $table->tbody();
 		$tr->close();
 	}
 $tbody->close();
+$mytable = $table->render();
 
 echo <<<HTML
 <pre>
@@ -33,4 +34,4 @@ echo <<<HTML
 </style>
 HTML;
 
-$table->render(true);
+echo $mytable;
