@@ -2,7 +2,7 @@
 /**
 * @author anovsiradj (Mayendra Costanov)
 * @version 201603081142 (created)
-* @license Internet License.
+* @license MIT (http://anovsiradj.mit-license.org/2016-2016)
 */
 namespace avz\PTable;
 

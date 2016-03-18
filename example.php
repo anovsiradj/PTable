@@ -1,5 +1,5 @@
 <?php
-require 'PTable.php';
+require 'avz/src/PTable.php';
 
 $data = [
 	["Data A","Data B","Data C"],
