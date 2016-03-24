@@ -8,6 +8,12 @@
             "email": "anov.siradj@gin.co.id"
         }
     ],
+        "autoload": {
+        "psr-4": {
+            "avz\\":"avz/src",
+            "avz\\ptable\\": "avz/avz/src"
+        }
+    },
     "minimum-stability": "stable",
     "require": {}
 }
