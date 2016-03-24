@@ -10,8 +10,7 @@
     ],
         "autoload": {
         "psr-4": {
-            "avz\\":"avz/src",
-            "avz\\ptable\\": "avz/avz/src"
+            "avz\\ptable\\": "PTable/src"
         }
     },
     "minimum-stability": "stable",
