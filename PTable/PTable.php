@@ -1,31 +1,31 @@
 <?php
 /**
 * @author anovsiradj (Mayendra Costanov)
-* @version 201603081142 (created)
+* @version 201603240956 (created,updated)
 * @license MIT (http://anovsiradj.mit-license.org/2016-2016)
 */
 namespace avz\PTable;
 
 class PTable {
 	private $table;
-	function __construct() { $this->open(); }
-	public function open() { $this->table = ["<table>"]; }
-	public function thead() {
+	function __construct($table = "<table>") { $this->open($table); }
+	public function open($table) { $this->table = [$table]; }
+	public function thead($thead = "<thead>") {
 		$this->is_thead = true;
-		$this->thead = ["<thead>"];
+		$this->thead = [$thead];
 		$this->table[] = &$this->thead;
 		return $this;
 	}
-	public function tbody() {
+	public function tbody($tbody = "<tbody>") {
 		$this->is_tbody = true;
-		$this->tbody = ["<tbody>"];
+		$this->tbody = [$tbody];
 		$this->table[] = &$this->tbody;
 		return $this;
 	}
-	public function tr() {
+	public function tr($tr = "<tr>") {
 		$this->is_tr = true;
 		$this->close();
-		$this->tr = ["<tr>"]; // renew
+		$this->tr = [$tr]; // renew
 		switch (true) {
 			case (@$this->is_tbody):
 				$this->tbody[] = &$this->tr;
@@ -39,22 +39,22 @@ class PTable {
 		}
 		return $this;
 	}
-	public function td($k) {
+	public function td($k,$td = "<td>") {
 		if (is_array($k)) {
 			foreach ($k as $v) {
-				$this->tr[] = "<td>".$v."</td>";
+				$this->tr[] = $td.$v."</td>";
 			}
 		} else {
-			$this->tr[] = "<td>".$k."</td>";
+			$this->tr[] = $td.$k."</td>";
 		}
 	}
-	public function th($k) {
+	public function th($k,$th = "<th>") {
 		if (is_array($k)) {
 			foreach ($k as $v) {
-				$this->tr[] = "<th>".$v."</th>";
+				$this->tr[] = $th.$v."</th>";
 			}
 		} else {
-			$this->tr[] = "<th>".$k."</th>";
+			$this->tr[] = $th.$k."</th>";
 		}
 	}
 	function close() {
