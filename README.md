@@ -15,3 +15,5 @@ Initial release.
 ```bat
 composer require avz/ptable
 ```
+# Example Result
+![example.php](https://cloud.githubusercontent.com/assets/6737021/14007532/2bda8726-f1aa-11e5-99de-f868a34228e5.PNG)
