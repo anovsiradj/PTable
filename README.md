@@ -5,6 +5,10 @@ PHP (HTML) Table.
 The `example.php` tell you everything. :bowtie:
 
 # Changelog
+
+### v1.3
+Stupid update. Sorry.
+
 ### v1.2
 Allow custom open-tag.
 
