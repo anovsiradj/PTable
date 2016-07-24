@@ -44,4 +44,3 @@ echo <<<HTML
 HTML;
 
 echo $mytable;
-//yudi was here
